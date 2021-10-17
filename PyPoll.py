@@ -25,9 +25,13 @@ with open(file_to_load) as election_data:
         if candidate_name not in candidate_options:
             candidate_options.append(candidate_name)
             candidate_votes[candidate_name] = 0
+        
         candidate_votes[candidate_name] += 1
     
-    print(candidate_votes)
+    for candidate_name in candidate_votes:
+        votes = candidate_votes[candidate_name]
+        vote_percentage = round(float(votes)/float(total_votes) * 100,1)
+        print(f"{candidate_name}: received {vote_percentage}% of the vote.")
 
 
 
