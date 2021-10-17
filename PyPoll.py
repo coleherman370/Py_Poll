@@ -40,7 +40,6 @@ with open (file_to_save,'w') as txt_file:
             f"Total Votes: {total_votes:,}\n"
             f"-------------------------\n")               
         
-        print(candidate_votes)
         txt_file.write(election_results)
 
         for candidate_name in candidate_votes:
@@ -63,9 +62,6 @@ with open (file_to_save,'w') as txt_file:
                     f"-------------------------\n")
         
         txt_file.write(winning_candidate_summary)
-        
-        
-        # txt_file.write(candidate_results)
             
 
 
