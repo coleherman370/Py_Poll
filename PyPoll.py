@@ -5,10 +5,11 @@
 # 4. Get the total votes for each candidate.
 # 5. Get the total votes cast for the election.
 
-import datetime
 import csv
 import os
+from datetime import datetime
 
+start_time = datetime.now()
 # Global variables
 file_to_load = os.path.join("Resources", "election_results.csv")
 file_to_save = os.path.join("Analysis", "election_analysis.txt")
@@ -78,7 +79,8 @@ txt = os.path.join("Analysis", "election_analysis.txt")
 txt = open(txt,'r')
 txt_content = txt.read()
 print(txt_content)
-# Give user opportunity to read result in CMD before script auto closes
+end_time = datetime.now()
+print("Duration of PyPoll.py: {}".format(end_time - start_time))
 input('Press any button to close PyPoll:')    
 
 
